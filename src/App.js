@@ -11,16 +11,23 @@ function App() {
   const [isOpen, setIsOpen] = useState(true);
 
   function handlePrevious() {
-    if (step > 1) setStep((prevStep) => prevStep - 1);
+    if (step > 1) {
+      setStep((prevStep) => prevStep - 1);
+    }
   }
 
   function handleNext() {
-    if (step < 3) setStep((prevStep) => prevStep + 1);
+    if (step < 3) {
+      setStep((prevStep) => prevStep + 1);
+    }
   }
 
   return (
     <>
-      <button className="close" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className="close"
+        onClick={() => setIsOpen((prevOpen) => !prevOpen)}
+      >
         &times;
       </button>
 
